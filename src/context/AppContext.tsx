@@ -1,7 +1,7 @@
 import React, { createContext, useMemo, useState } from "react";
 
-export type DarkTheme = "dark";
-export type LightTheme = "light";
+export type DarkTheme = "darky";
+export type LightTheme = "lighty";
 
 export type ThemeType = DarkTheme | LightTheme;
 
@@ -11,7 +11,7 @@ export type AppContextType = {
 };
 
 export const AppContext = createContext<AppContextType>({
-	theme: "light",
+	theme: "lighty",
 	toggleTheme: () => {},
 });
 
@@ -22,10 +22,10 @@ export type AppContextProviderProps = {
 const AppContextProvider: React.FC<AppContextProviderProps> = ({
 	children,
 }) => {
-	const [theme, setTheme] = useState<ThemeType>("light");
+	const [theme, setTheme] = useState<ThemeType>("lighty");
 
 	const toggleTheme = (): void => {
-		setTheme((theme) => (theme === "light" ? "dark" : "light"));
+		setTheme((theme) => (theme === "lighty" ? "darky" : "lighty"));
 	};
 
 	const value = useMemo(() => {

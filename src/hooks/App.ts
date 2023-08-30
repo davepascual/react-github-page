@@ -8,7 +8,7 @@ export const useTheme = () => {
 		darkValue: DarkValue,
 		lightValue: LightValue
 	): DarkValue | LightValue => {
-		return app.theme === "dark" ? darkValue : lightValue;
+		return app.theme === "darky" ? darkValue : lightValue;
 	};
 
 	const whenLight = <LightValue, DarkValue>(
